@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap5/flutter_bootstrap5.dart';
 
@@ -11,6 +9,7 @@ class FlutterBoostrap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterBootstrap5(
+      // breakPoints:
       builder: (BuildContext context) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
@@ -85,7 +84,7 @@ class BootStrapWebsite extends StatelessWidget {
                 child: Column(
                   children: [
                     FB5Row(
-                      //  classNames: ,
+                      classNames: 'mt-5 px-5',
                       children: [
                         FB5Col(
                           child: _buildCard('Card 1', 'This is card 1'),
@@ -99,75 +98,42 @@ class BootStrapWebsite extends StatelessWidget {
                         FB5Col(
                           child: _buildCard('Card 4', 'This is card 4'),
                         ),
+                        FB5Col(
+                          child: _buildCard('Card 4', 'This is card 5'),
+                        ),
+                        FB5Col(
+                          child: _buildCard('Card 4', 'This is card 6'),
+                        ),
+                        FB5Col(
+                          child: _buildCard('Card 4', 'This is card 7'),
+                        ),
+                        FB5Col(
+                          child: _buildCard('Card 4', 'This is card 8'),
+                        ),
+                        FB5Col(
+                          child: _buildCard('Card 4', 'This is card 9'),
+                        ),
+                        FB5Col(
+                          child: _buildCard('Card 4', 'This is card 10'),
+                        ),
                       ],
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      //    width: MediaQuery.of(context).size.width,
-                      child: GridView.count(
-                        crossAxisCount: 4,
-                        mainAxisSpacing: 2,
-                        children: [
-                          Card(
-                            child: Text(
-                              'First Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Second Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Third Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Fourth Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Fifth Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Sixth Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Seventh Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Card(
-                            child: Text(
-                              'Eigth Grid',
-                              textAlign: TextAlign.center,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-
-                    // FB5Grid(
-                    //   children: [
-                    //     _buildCard('Grid1', 'First Grid'),
-                    //     _buildCard('Grid2', 'Second Grid'),
-                    //     _buildCard('Grid3', 'Third Grid'),
-                    //     _buildCard('Grid4', 'Fourth Grid'),
-                    //   ],
-                    // ),
+                    FB5Grid(classNames: 'row-cols-7', children: [
+                      _buildCard('Hi', 'This is Grid 1'),
+                      _buildCard('Hi', 'This is Grid 2'),
+                      _buildCard('Hi', 'This is Grid 3'),
+                      _buildCard('Hi', 'This is Grid 4'),
+                      _buildCard('Hi', 'This is Grid 5'),
+                      _buildCard('Hi', 'This is Grid 6'),
+                      _buildCard('Hi', 'This is Grid 7'),
+                      _buildCard('Hi', 'This is Grid 8'),
+                      _buildCard('Hi', 'This is Grid 9'),
+                      _buildCard('Hi', 'This is Grid 10'),
+                      _buildCard('Hi', 'This is Grid 11'),
+                      _buildCard('Hi', 'This is Grid 12'),
+                      _buildCard('Hi', 'This is Grid 13'),
+                      _buildCard('Hi', 'This is Grid 14'),
+                    ])
                   ],
                 ),
               ),
@@ -186,7 +152,7 @@ Widget _buildCard(String title, String content) {
         Text(
           title,
           style: TextStyle(
-            fontSize: 50.0,
+            fontSize: 10.0,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
@@ -195,7 +161,7 @@ Widget _buildCard(String title, String content) {
         Text(
           content,
           style: TextStyle(
-            fontSize: 50.0,
+            fontSize: 30.0,
             color: Colors.black,
           ),
         ),
