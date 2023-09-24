@@ -40,7 +40,7 @@ class BootStrapWebsite extends StatelessWidget {
         return FB5Container.fluid(
           child: Scaffold(
             appBar: AppBar(
-              backgroundColor: ColorScheme.dark().background,
+              backgroundColor: BootstrapTheme.of(context).colors.secondary,
               leading: PopupMenuButton(
                   itemBuilder: (context) => [
                         PopupMenuItem(
